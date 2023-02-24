@@ -1,7 +1,11 @@
+import { Box, Container } from "@mui/system";
 
-
-export const News = () => {
+const News = () => {
   return (
-    <div>News</div>
-  )
-}
+    <Container sx={{ background: "#ddd" }}>
+      <Box>News</Box>
+    </Container>
+  );
+};
+
+export default News;

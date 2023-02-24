@@ -13,18 +13,8 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import RestoreIcon from "@mui/icons-material/Restore";
 
-export const Home = () => {
-const navigate = useNavigate();
-const onToPageNavigate = (value: number) => {
-  switch(value){
-    case 1:
-      return navigate('/news');
+const Home = () => {
 
-    default:
-    return navigate('/');
-  }
-
-}
   return (
     <Container sx={{ background: "#eee" }}>
       <Box>
@@ -32,10 +22,10 @@ const onToPageNavigate = (value: number) => {
         <Typography variant="h4" component="h1" gutterBottom>
           Web Show Pages
         </Typography>
-        <Box>
-   
-        </Box>
+        <Box></Box>
       </Box>
     </Container>
   );
 };
+
+export default Home;

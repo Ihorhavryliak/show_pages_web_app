@@ -1,5 +1,9 @@
 import { Route, Routes } from "react-router-dom";
-import { Home } from "./components/Home/Home";
+import Home from "./components/Home/Home";
+import News from "./components/News/News";
+import Profile from "./components/Profile/Profile";
+import SignIn from "./components/SignIn/SignIn";
+
 
 
 export const Routers = () => {
@@ -8,12 +12,15 @@ export const Routers = () => {
       <Routes>
         <Route path="/">
           <Route index element={<Home />} />
-         {/*  <Route path="sign-up">
-            <Route index element={<Register />}></Route>
+        <Route path="news">
+            <Route index element={<News />}></Route>
           </Route>
-          <Route path="sign-in">
-            <Route index element={<SighIn />}></Route>
-          </Route> */}
+          <Route path="profile">
+            <Route index element={<Profile />}></Route>
+          </Route> 
+          <Route path="sigh-in">
+            <Route index element={<SignIn />}></Route>
+          </Route> 
         </Route>
       </Routes>
     </>

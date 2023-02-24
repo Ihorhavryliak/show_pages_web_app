@@ -1,3 +1,7 @@
 .text__decoration{
   text-decoration: none !important;
 }
+
+.overflow__main {
+  overflow-wrap: break-word;
+}
