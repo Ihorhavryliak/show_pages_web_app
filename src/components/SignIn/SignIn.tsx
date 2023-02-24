@@ -10,9 +10,11 @@ import { useNavigate } from "react-router-dom";
 import { AppDispatch } from "../../redux/store";
 import { useDispatch } from "react-redux";
 import { login } from "../../redux/AuthReducer/auth_reducer";
+import { useTranslation } from "react-i18next";
 
 const SignIn = () => {
   //start
+  const {t} =useTranslation();
   const dispatch: AppDispatch = useDispatch();
   const navigate = useNavigate();
   //validation
@@ -32,7 +34,7 @@ const SignIn = () => {
     } else {
       setValidation({
         ...validation,
-        name: `Username or password entered incorrectly.`,
+        name: t("error_name_password"),
       });
     }
   };
@@ -51,7 +53,7 @@ const SignIn = () => {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" sx={{ mb: 3 }} variant="h5">
-          Sign in
+           {t("Sign in")}
         </Typography>
         {/*     form */}
         <form onSubmit={onHandleSubmit}>
@@ -81,7 +83,7 @@ const SignIn = () => {
           {/*  button */}
           <Box sx={{ textAlign: "center" }}>
             <Button type="submit" variant="contained">
-              Sign in
+            {t("Sign in")}
             </Button>
           </Box>
         </form>

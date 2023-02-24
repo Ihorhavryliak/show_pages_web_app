@@ -13,9 +13,11 @@ import { AppDispatch } from "../../redux/store";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
+import { useTranslation } from "react-i18next";
 
 const News = () => {
   /*  start */
+  const { t } = useTranslation();
   const dispatch: AppDispatch = useDispatch();
   //get data
   const postData = useSelector(getPostDataSelector);
@@ -40,8 +42,8 @@ const News = () => {
   return (
     <Container>
       {/*  title */}
-      <Typography variant="h1" component="h1" gutterBottom>
-        News
+      <Typography variant="h3" component="h1" gutterBottom>
+          {t("News")}
       </Typography>
       {/*  content */}
       {postData.length > 0 && (
@@ -59,7 +61,7 @@ const News = () => {
                 </CardContent>
                 <CardActions>
                   <Button size="small" onClick={() => onDeletePost(post.id)}>
-                    Delete post
+                     {t("Delete post")}
                   </Button>
                 </CardActions>
               </Card>
@@ -68,7 +70,7 @@ const News = () => {
         </Grid2>
       )}
       {/* no find nothing */}
-      {postData.length === 0 && <Box>No find posts</Box>}
+      {postData.length === 0 && <Box>{t("No find posts")}</Box>}
 
       {/* button */}
       {postData.length > 0 && (
@@ -79,7 +81,7 @@ const News = () => {
               size="medium"
               onClick={() => onGetPost(postNumber + 1)}
             >
-              Download yet
+              {t("Download yet")}
             </Button>
 
         </Box>
