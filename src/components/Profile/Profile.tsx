@@ -18,7 +18,7 @@ const Profile = () => {
     if (userData.length === 0) {
       return navigate("/");
     }
-  }, []);
+  }, [userData]);
 
   //return
   if (userData.length === 0) {
@@ -33,7 +33,7 @@ const Profile = () => {
             </Typography>
             <Box>
               <Typography>
-              {t("Hello")}, {userData.length > 0 && userData[0].email}!
+                {t("Hello")}, {userData.length > 0 && userData[0].email}!
               </Typography>
             </Box>
           </Grid2>

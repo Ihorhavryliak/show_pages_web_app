@@ -1,8 +1,6 @@
 import { GetNewPostType, postAPI } from "../../api/post_api";
 import { BaseThunkType, InfersActionsTypes } from "../store";
 
-export type UserType = { email: string; password: string };
-
 let initialState = {
   isSuccess: false as boolean | null,
   post: [] as GetNewPostType[],

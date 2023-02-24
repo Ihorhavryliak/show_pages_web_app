@@ -63,7 +63,6 @@ export const login =
     try {
       localStorage.setItem("user", JSON.stringify({ email, password }));
       dispatch(actions.setIsSuccess(true));
-      dispatch(actions.setIsSuccess(true));
     } catch (err) {
       dispatch(actions.setIsSuccess(false));
       console.log(err);

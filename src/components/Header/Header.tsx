@@ -12,11 +12,12 @@ import { Links } from "./Links";
 import { Logo } from "./Logo";
 import { LogOutButton } from "./Buttons/LogOutButton";
 import { SignInButton } from "./Buttons/SignInButton";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   /* start */
   //translate
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const dispatch: AppDispatch = useDispatch();
   const navigation = useNavigate();
   const dataUser = useSelector(getUserDataSelector);
@@ -54,16 +55,21 @@ const Header = () => {
           {dataUser.length > 0 ? (
             <Grid2 xs="auto" justifyContent={"end"}>
               <Box>
-                <Typography variant="caption" sx={{ mr: 2 }}>
-                  {dataUser[0].email}
-                </Typography>
+                <NavLink to={"/profile"}>
+                  {t("Profile")}
+                  <Typography sx={{ mr: 2, ml: 1 }} variant="caption">
+                    ({dataUser[0].email})
+                  </Typography>
+                </NavLink>
                 {/* button */}
                 <LogOutButton onLogOut={onLogOut} />
               </Box>
             </Grid2>
           ) : (
             /* button */
-            <SignInButton onRedirectSighIn={onRedirectSighIn} />
+            <>
+              <SignInButton onRedirectSighIn={onRedirectSighIn} />
+            </>
           )}
         </Grid2>
       </Box>
