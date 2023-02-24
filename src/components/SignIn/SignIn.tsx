@@ -11,10 +11,11 @@ import { AppDispatch } from "../../redux/store";
 import { useDispatch } from "react-redux";
 import { login } from "../../redux/AuthReducer/auth_reducer";
 import { useTranslation } from "react-i18next";
+import { FormSignIn } from "./FormSignIn";
 
 const SignIn = () => {
   //start
-  const {t} =useTranslation();
+  const { t } = useTranslation();
   const dispatch: AppDispatch = useDispatch();
   const navigate = useNavigate();
   //validation
@@ -53,40 +54,16 @@ const SignIn = () => {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" sx={{ mb: 3 }} variant="h5">
-           {t("Sign in")}
+          {t("Sign in")}
         </Typography>
         {/*     form */}
-        <form onSubmit={onHandleSubmit}>
-          {/*    name */}
-          <Box>
-            <Input
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="Name"
-              type="text"
-              required
-              sx={{ mb: 3 }}
-            />
-          </Box>
-
-          {/*  password */}
-          <Box>
-            <Input
-              value={password}
-              placeholder="Password"
-              onChange={(e) => setPassword(e.target.value)}
-              type="password"
-              sx={{ mb: 3 }}
-            />
-          </Box>
-
-          {/*  button */}
-          <Box sx={{ textAlign: "center" }}>
-            <Button type="submit" variant="contained">
-            {t("Sign in")}
-            </Button>
-          </Box>
-        </form>
+        <FormSignIn
+          setPassword={setPassword}
+          onHandleSubmit={onHandleSubmit}
+          name={name}
+          setName={setName}
+          password={password}
+        />
       </Box>
       {/*   message error */}
       {validation.name.length > 0 && (

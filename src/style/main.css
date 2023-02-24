@@ -1,13 +1,12 @@
-a{
+a {
   text-decoration: none !important;
 }
-
 .overflow__main {
   overflow-wrap: break-word;
 }
-.active{
+.active {
   color: rgb(19, 80, 2);
 }
-body{
+body {
   min-height: 61rem;
 }

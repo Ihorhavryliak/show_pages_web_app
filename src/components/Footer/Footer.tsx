@@ -8,9 +8,9 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const { t } = useTranslation();
   return (
-    <Container sx={{  backgroundColor: "#f1f1f173", mt: "6rem", py: '1rem' }}>
+    <Container sx={{ backgroundColor: "#f1f1f173", mt: "6rem", py: "1rem" }}>
       <Box>
-        <Grid2 container justifyContent={'center'}>
+        <Grid2 container justifyContent={"center"}>
           <Typography variant="body2" sx={{ color: "#ddd" }} align="center">
             {t("Copyright © ")}
             {new Date().getFullYear()}
