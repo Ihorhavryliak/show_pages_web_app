@@ -16,13 +16,13 @@ import RestoreIcon from "@mui/icons-material/Restore";
 const Home = () => {
 
   return (
-    <Container sx={{ background: "#eee" }}>
+    <Container >
       <Box>
         {/* name */}
-        <Typography variant="h4" component="h1" gutterBottom>
-          Web Show Pages
+        <Typography variant="h1" component="h1" gutterBottom>
+         Main page
         </Typography>
-        <Box></Box>
+        <Box>Soon there will be adding new information.</Box>
       </Box>
     </Container>
   );

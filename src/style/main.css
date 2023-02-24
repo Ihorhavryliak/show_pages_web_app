@@ -1,7 +1,10 @@
-.text__decoration{
+a{
   text-decoration: none !important;
 }
 
 .overflow__main {
   overflow-wrap: break-word;
+}
+.active{
+  color: rgb(19, 80, 2);
 }
