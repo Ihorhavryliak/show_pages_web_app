@@ -1,14 +1,17 @@
 import { useSelector } from "react-redux";
-import { Navigate, Route } from "react-router-dom";
-import Profile from "../components/Profile/Profile";
+import { Navigate } from "react-router-dom";
 import { getIsAuthSelector } from "../redux/AuthReducer/auth_selector";
 
-export const PrivateRoute = () => {
+export const PrivateRoute = ({ element }: PrivateRouteType) => {
   const isAuthenticated = useSelector(getIsAuthSelector);
 
   if (!isAuthenticated) {
     return <Navigate to="/" />;
   }
 
-  return <Profile />;
+  return element;
+};
+
+type PrivateRouteType = {
+  element: JSX.Element;
 };

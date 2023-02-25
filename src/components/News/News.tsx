@@ -3,6 +3,7 @@ import { Box, Container } from "@mui/system";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
+  cleanAllData,
   deletePost,
   getNewPost,
   getPost,
@@ -24,7 +25,9 @@ const News = () => {
   /* get post  */
   useEffect(() => {
     dispatch(getPost(postNumber));
-    return () => {};
+    return () => {
+      dispatch(cleanAllData())
+    };
   }, []);
   // get more posts
   const onGetPost = (numberPost: number) => {

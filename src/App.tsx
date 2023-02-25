@@ -7,7 +7,6 @@ import { getUser } from "./redux/AuthReducer/auth_reducer";
 import { AppDispatch } from "./redux/store";
 import { Routers } from "./Routers";
 import "./style/main.css";
-import { Button } from "@mui/material";
 
 export default function App() {
   /* start */
