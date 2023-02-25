@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.017a00f8.css","mappings":"AAAA,EACE,8BACF,CACA,gBACE,wBACF,CACA,QACE,aACF,CACA,KACE,gBACF","sources":["style/main.css"],"sourcesContent":["a {\n  text-decoration: none !important;\n}\n.overflow__main {\n  overflow-wrap: break-word;\n}\n.active {\n  color: rgb(19, 80, 2);\n}\nbody {\n  min-height: 61rem;\n}\n"],"names":[],"sourceRoot":""}
