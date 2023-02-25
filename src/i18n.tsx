@@ -14,7 +14,7 @@ i18n
       caches: ["cookie"],
     },
     backend: {
-      loadPath: '/Ihorhavryliak/locales/{{lng}}/{{ns}}.json',
+      loadPath: '/show_pages_web_app/locales/{{lng}}/{{ns}}.json',
     },
     interpolation: {
       escapeValue: false,
