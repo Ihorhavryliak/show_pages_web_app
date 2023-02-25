@@ -3,8 +3,6 @@ import Backend from "i18next-http-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
 
-
-
 i18n
   .use(Backend)
   .use(LanguageDetector)
@@ -15,7 +13,9 @@ i18n
       order: ["queryString", "cookie"],
       caches: ["cookie"],
     },
-    backend: {loadPath: '/locales/{{lng}}/{{ns}}.json'},
+    backend: {
+      loadPath: '/Ihorhavryliak/locales/{{lng}}/{{ns}}.json',
+    },
     interpolation: {
       escapeValue: false,
     },
