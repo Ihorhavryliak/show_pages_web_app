@@ -15,7 +15,7 @@ i18n
       order: ["queryString", "cookie"],
       caches: ["cookie"],
     },
-    backend: {loadPath: '/locales/{{lng}}/{{ns}}.json',},
+    backend: {loadPath: '/locales/{{lng}}/{{ns}}.json'},
     interpolation: {
       escapeValue: false,
     },
